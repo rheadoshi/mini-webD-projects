@@ -1,7 +1,5 @@
 const container = document.querySelector('#container');
 let rainbows = false;
-
-// Set up the container dynamically
 container.style.display = 'flex';
 container.style.flexDirection = 'column';
 container.style.width = '80vh';
@@ -9,22 +7,20 @@ container.style.height = '80vh';
 container.style.border = '1px solid black';
 container.style.boxSizing = 'border-box';
 
-// Function to create a dynamic grid
 function createGrid(size) {
     container.innerHTML = ''; // Clear the container
 
     for (let i = 0; i < size; i++) {
         const row = document.createElement('div');
         row.style.display = 'flex';
-        row.style.flex = '1'; // Rows equally spaced
+        row.style.flex = '1'; 
 
         for (let j = 0; j < size; j++) {
             const square = document.createElement('div');
-            square.style.flex = '1'; // Squares equally spaced in row
+            square.style.flex = '1'; 
             square.style.border = '1px solid grey';
             square.style.boxSizing = 'border-box';
 
-            // Add hover effect
             square.addEventListener('mouseover', () => {
                 if (!rainbows) {
                     square.style.backgroundColor = 'black';
@@ -33,14 +29,12 @@ function createGrid(size) {
                 }
             });
 
-            // Append each square to the row
             row.appendChild(square);
         }
-        container.appendChild(row); // Append each row to the container
+        container.appendChild(row);
     }
 }
 
-// Function to generate a random hex color
 const randomCol = function () {
     let col = '#';
     const allowed = '0123456789ABCDEF';
@@ -53,7 +47,6 @@ const randomCol = function () {
 // Initialize a default 16x16 grid
 createGrid(16);
 
-// Event listener for changing grid size
 const gridButton = document.querySelector('#gridSize');
 gridButton.addEventListener('click', function () {
     const size = Number(prompt('Enter size of grid "n x n": ', 16));
@@ -64,13 +57,11 @@ gridButton.addEventListener('click', function () {
     }
 });
 
-// Event listener for rainbow mode
 const rainbowButton = document.querySelector('#rainbow');
 rainbowButton.addEventListener('click', function () {
     rainbows = true;
 });
 
-// Event listener for black mode
 const blackButton = document.querySelector('#black');
 blackButton.addEventListener('click', function () {
     rainbows = false;
