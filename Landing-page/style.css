@@ -18,6 +18,7 @@
 #header{
     display: flex;
     font-family: fantasy;
+    margin-left: 15px;
     font-size: xx-large;
 }
 
@@ -67,3 +68,18 @@
     border-radius: 30px;;
 }
 
+#contactUs{
+    color: azure;
+    font-size: larger;
+    text-align: center;
+    opacity:0.85;
+    background-color: orangered;
+}
+
+/* input:invalid{
+    border-color: red;
+} */
+
+#box{
+    display: flex;
+}
