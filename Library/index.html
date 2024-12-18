@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="box">
+            <img src="static/library_icon.svg" alt="ICON">
+            Library
+        </div>
+        <div class="box">
+            <button id="NewBookBtn">New Book</button>
+        </div>
+    </nav>
+    <div class="content"></div>
+    <dialog id="bookDialog">
+        <form id="bookForm">
+            <h2>Add a New Book</h2>
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <input type="number" id="pages" placeholder="Pages" required>
+            
+            <label>Read</label>
+            <input type="checkbox" id="read">
+            
+            <button type="submit">Add Book</button>
+            <button type="button" id="cancelBtn">Cancel</button>
+        </form>
+    </dialog>
+    <script src="script.js"></script>
+</body>
+</html>
